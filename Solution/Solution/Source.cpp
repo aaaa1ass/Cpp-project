@@ -1,89 +1,95 @@
-#include <iostream> // i : input, o : output
+#include <iostream> 
+using namespace std;
+int data = 56;
 
-// C	출력 printf(), 입력: scanf()
-// C++	출력 std::cout, 입력: std::cin
+#pragma region 이름 공간
+// 속성을 구분할 수 있도록 유효 범위를 설정하는 영역
 
-// stream: 시간의 흐름에 따라 연속적으로 발생하는 데이터의 흐름
-
-
-
-void Function(const int & x)
+namespace A
 {
-	std::cout << "x: " << x << std::endl; 
+	void Damage()
+	{
+		cout << "A 개발자 Damage() 함수" << endl;
+	}
+}
+namespace B
+{
+	void Damage()
+	{
+		cout << "B 개발자 Damage() 함수" << endl;
+	}
+}
+#pragma endregion
+
+struct Monster
+{
+
+};
+
+class Player
+{
+	// 속성
+	// -> 변수
+	
+	// 기능
+	// -> 함수
+};
+
+// auto는 매개 변수로 사용할 수 없다
+void Volume(int x)
+{
+
 }
 
+using namespace A;
 int main()
 {
-#pragma region 입출력
-
-
-
-	// char a = 'A';
-	// int b = 100;
-	// float c = 9.81f;
+#pragma region 범위 지정 연산자
+	// // 여러 범위에서 사용되는 식별자를 구분하는데 사용하는 연산자
+	// // (범위 연산자)::
 	// 
-	// // << : 삽입 연산자
-	// // 자신이 참조한 값을 반환하는 연산자
-	// std::cout << a << std::endl; //std::endl : 개행
-	// std::cout << b << " / " << c << std::endl;
+	// int data = 100;
 	// 
-	// int data = 0;
-	// int data_1 = 0;
-	// 
-	// // >> : 추출 연산자
-	// // 버퍼에 저장한 다음 NULL 문자까지만 버퍼 안의 내용을 전달하는 연산자
-	// std::cin >> data >> data_1;
-	// std::cout << "data: " << data << std::endl;
-	// std::cout << "data_1: " << data_1 << std::endl;
+	// // 전역 변수와 지역 변수가 같은 이름으로 선언되었을 때 가장 가까운 범위의 변수를 사용하는 규칙으로 전역 변수가 호출되지 않음
+	// std::cout << "Stack 영역의 data: " << data << std::endl;
+	// std::cout << "Data 영역의 data: " << ::data << std::endl;
+#pragma endregion
+
+#pragma region 이름 공간
+	//A::Damage();
+	//B::Damage();
 
 #pragma endregion
 
+#pragma region auto (자료형 추론)
+	//  // 선언된 변수의 초기화 식을 사용하여 해당 형식을 추론하도록 컴파일러에게 지시하는 기능
+	//  
+	//  auto decimal = 6.25;
+	//  auto value = 100;
+	//  
+	//  // auto 사용 시 값을 반드시 넣어야 한다.
+	//  // auto bin; -> x
+	//  
+	//  // for(초기값; 조건식; 증감식)
+	//  
+	//  //범위 기반 for문(foreach)
+	//  int table[5] = { 1,2,3,4,5 };
+	//  
+	//  for (const int & e : table)
+	//  {
+	//  	std::cout << e << std::endl;
+	//  }
+	
 
-#pragma region 동적 할당 ++
-	// c
-	// malloc()
-	// free()
 
-	// c++
-	// new 메모리 할당
-	// delete 메모리 해제
-	 
-	// [4 byte 메모리의 시작 주소] --> [][][][]
+#pragma endregion
 
-	//new 객체() 생성자를 호출한다
-	//malloc() 생성자를 호출하지 않는다
-	//int* ptr = new int;
-	//*ptr = 100;
-	//delete ptr;
-	//
-	//int* p = new int[3]; // 4 byte x 3 연속된 메모리
-	//p[0] = 100;
-	//p[1] = 200;
-	//p[2] = 300;
-	//delete [] p;
+#pragma region 클래스
+	// 사용자 정의 데이터 유형으로 속성과 함수가 포함되어 있으며, 클래스를 통해 객체를 생성하여 접근하고 사용할 수 있는 집합체
 #pragma endregion
 
 
-#pragma region 참조자
-	// // 어떤 변수의 메모리 공간에의 또 다른 이름
-	// 
-	// int value = 10;
-	// 
-	// //참조자 선언
-	// int& other = value;
-	// int& other1 = value;
-	// 
-	// std::cout << "value: " << value << std::endl;
-	// std::cout << "other: " << other << std::endl;
-	// 
-	// other = 300;
-	// other1 = 23;
-	// 
-	// Function(value);
-	// 
-	// std::cout << "value: " << value << std::endl;
-	// std::cout << "other: " << other << std::endl;
-#pragma endregion
+
 
 	return 0;
 }
