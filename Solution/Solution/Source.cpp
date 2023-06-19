@@ -1,83 +1,93 @@
 #include <iostream>
-#include "DataFile.h"
-#include "stdafx.h"
+#include "IPhone.h"
+
 using namespace std;
 
-#pragma region 깊은 복사
-// 객체를 복사할 때, 참조 값이 아닌 인스턴스 자체를 서로 복사하여 서로 다른 메모리를 생성하는 복사
-
-class GameObject
+#pragma region 상속
+//상위 클래스의 속성을 하위 클래스가 사용할 수 있도록 설정해주는 기능
+class Parent
 {
 public:
-	int size;
-	int* data;
-	static int deathCount;
-	
-	GameObject(int m_size)
+	Parent()
 	{
-		size = m_size;
-		data = new int[size];
+		cout << "Parent() 클래스 생성" << endl;
 	}
 
-	GameObject(const GameObject& clone)
+	~Parent()
 	{
-		size = clone.size;
-		data = new int[size];
+		cout << "Parent() 클래스 소멸" << endl;
 	}
 
-	~GameObject()
+	void Speak(int a)
 	{
-		delete[] data;
-		deathCount++;
-		cout << "게임 오브젝트가 파괴된 횟수: " << deathCount << endl;
+		// this 포인터
+		// 자기 자신을 가리키는 포인터
+		this->a = a;
+
+		cout << this << endl;
+		//this 포인터는 호출된 객체를 가리키는 상수 포인터다
+		// 상수 포인터 자료형이므로 포인터 자체가 다른 것을 가리키도록 할 수 없다
+
+		cout << "Speak()" << endl;
 	}
+	int a;
+protected:
+	int b;
+private:
+	int c;
 };
 
-int GameObject::deathCount = 0;
+class Child : public Parent
+{
+public:
+	Child()
+	{
+		//public 상속
+		//a = 10; (o)
+		//b = 20; (o)
+		//c = 30; (x)
+
+		//protected 상속
+		//a = 10; (o)
+		//b = 20; (o)
+		//c = 30; (x)
+
+		cout << "Child() 클래스 생성" << endl;
+	}
+	~Child()
+	{
+		cout << "Child() 클래스 소멸" << endl;
+	}
+};
 #pragma endregion
 
-//외부 변수
-int globalValue = 100;
+
 
 int main()
 {
-#pragma region 얕은 복사
-	// //객체를 복사할 때 주솟값을 복사하여 같은 메모리를 가리키는 복사
+	//Child child;
+	//public 상속 시
+	//child.a = 999;
+	
+	//protected 상속 시 접근할 수 있는 멤버 변수는 없다
+	//private도 없다
+
+	// Parent parent1;
+	// parent1.Speak();
 	// 
-	// int* ptr1 = new int;
-	// int* ptr2 = ptr1;
+	// Parent parent2;
+	// parent2.Speak();
 	// 
-	// 
-	// *ptr1 = 100;
-	// *ptr2 = 999;
-	// 
-	// cout << "ptr1이 가리키는 값: " << *ptr1 << endl;
-	// cout << "ptr2가 가리키는 값: " << *ptr2 << endl;
-	// 	// //얕은 복사의 경우 같은 객체가 서로 같은 메모리 공간을 참조하고 있기 때문에 하나의 객체로 값을 변경하게 되면 서로 참조된 객체도 영향을 받는다
+	// Parent parent3;
+	// parent3.Speak();
 
-	// delete(ptr1);
-	// //delete(ptr2);
+	//child.Speak();
 
+	IPhone iPhone14;
 
-#pragma endregion
+	iPhone14.SetControlSound(5);
 
-#pragma region 깊은 복사
-	// GameObject obj1(3);// data[] -> [][][]
-	// obj1.data[0] = 111;
-	// 
-	// GameObject obj2 = obj1;
-	// obj2.data[0] = 222;
-	// 
-	// cout << "obj1.data[0] = " << obj1.data[0] << endl;
-	// cout << "obj2.data[0] = " << obj2.data[0] << endl;
-
-#pragma endregion
-
-	GameObject::deathCount;
-
-	GameObject mostet1(1);
-	GameObject mostet2(1);
-	GameObject mostet3(1);
+	cout << iPhone14.GetVolume() << endl;
 
 	return 0;
 }
