@@ -18,15 +18,27 @@
     <ClCompile Include="Source.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Weapon.cpp">
+    <ClCompile Include="Class Cpp\Weapon.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="IPhone.cpp">
+    <ClCompile Include="Class Cpp\IPhone.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Class Cpp\Computer.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Class Cpp\Mouse.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Class Cpp\Keyboard.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Class Cpp\Device.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Header.h">
+    <ClInclude Include="Class Header\Header.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="(2023.6.13)이름공간.h">
@@ -35,22 +47,37 @@
     <ClInclude Include="(2023.6.14)클래스.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Weapon.h">
+    <ClInclude Include="Class Header\Weapon.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="(2023.6.15)생성자와소멸자.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="DataFile.h">
+    <ClInclude Include="Class Header\DataFile.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="stdafx.h">
+    <ClInclude Include="Class Header\stdafx.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="(2023.6.17)얕은깊은복사.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="IPhone.h">
+    <ClInclude Include="Class Header\IPhone.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="(2023.6.19)상속.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Class Header\Computer.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Class Header\Mouse.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Class Header\Keyboard.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Class Header\Device.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

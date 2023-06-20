@@ -1,4 +1,10 @@
-﻿  IPhone.cpp
+﻿  Computer.cpp
+  Device.cpp
+  IPhone.cpp
+C:\Users\GoodLife\Desktop\두루미\Cpp-project\Solution\Solution\Class Cpp\IPhone.cpp(1,10): fatal  error C1083: 포함 파일을 열 수 없습니다. 'IPhone.h': No such file or directory
+  Keyboard.cpp
+  Mouse.cpp
   Source.cpp
+  Weapon.cpp
+C:\Users\GoodLife\Desktop\두루미\Cpp-project\Solution\Solution\Class Cpp\Weapon.cpp(1,10): fatal  error C1083: 포함 파일을 열 수 없습니다. 'Weapon.h': No such file or directory
   코드를 생성하고 있습니다...
-  Solution.vcxproj -> C:\Users\GoodLife\Desktop\두루미\Cpp-project\Solution\x64\Debug\Solution.exe
