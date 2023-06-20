@@ -3,18 +3,20 @@
 
 using namespace std;
 
+
 int value = 50;
+
 
 int main()
 {
 
-#pragma region ´ÙÁß »ó¼Ó
-	//ÇÏ³ªÀÇ ÇÏÀ§ Å¬·¡½º°¡ ¿©·¯ °³ÀÇ »óÀ§ Å¬·¡½º¸¦ »ó¼Ó¹Þ´Â °Í
-	//C#Àº Áö¿øÇÏÁö ¾ÊÀ» »Ó´õ·¯ ÁÁÀº °Íµµ ¾Æ´Ï´Ù
+#pragma region ë‹¤ì¤‘ ìƒì†
+	//í•˜ë‚˜ì˜ í•˜ìœ„ í´ëž˜ìŠ¤ê°€ ì—¬ëŸ¬ ê°œì˜ ìƒìœ„ í´ëž˜ìŠ¤ë¥¼ ìƒì†ë°›ëŠ” ê²ƒ
+	//C#ì€ ì§€ì›í•˜ì§€ ì•Šì„ ë¿ë”ëŸ¬ ì¢‹ì€ ê²ƒë„ ì•„ë‹ˆë‹¤
 
 	// Computer computer;
 
-	// ´ÙÁß »ó¼ÓÀº ¿©·¯ °³ÀÇ »óÀ§ Å¬·¡½º¿¡ Áßº¹µÇ´Â ¼Ó¼ºÀÌ Á¸ÀçÇÒ ¼ö ÀÖ±â ¶§¹®¿¡ ¹üÀ§ ÁöÁ¤ ¿¬»êÀÚ¸¦ ÅëÇØ¼­ »óÀ§ Å¬·¡½ºÀÇ ÀÌ¸§À» ¼±¾ðÇÏ°í ¼Ó¼ºÀ» »ç¿ëÇØ¾ß ÇÑ´Ù
+	// ë‹¤ì¤‘ ìƒì†ì€ ì—¬ëŸ¬ ê°œì˜ ìƒìœ„ í´ëž˜ìŠ¤ì— ì¤‘ë³µë˜ëŠ” ì†ì„±ì´ ì¡´ìž¬í•  ìˆ˜ ìžˆê¸° ë•Œë¬¸ì— ë²”ìœ„ ì§€ì • ì—°ì‚°ìžë¥¼ í†µí•´ì„œ ìƒìœ„ í´ëž˜ìŠ¤ì˜ ì´ë¦„ì„ ì„ ì–¸í•˜ê³  ì†ì„±ì„ ì‚¬ìš©í•´ì•¼ í•œë‹¤
 
 	// computer.Keyboard::price = 10000;
 	// computer.Input('c');
