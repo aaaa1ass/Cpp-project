@@ -1,27 +1,58 @@
 #include <iostream>
-#include "../Solution/Class Header/Computer.h"
+#include "Class Header/Vector3.h"
 
 using namespace std;
 
+#pragma region 다형성
+//여러 개의 서로 다른 객체가 동일한 기능을 서로 다른 방법으로 처리할 수 있는 기능
+#pragma endregion
 
-int value = 50;
+#pragma region 함수의 오버로딩
+//같은 이름의 함수를 매개 변수의 자료형과 매개변수의 수로 구분하여 여러 개를 선언할 수 있는 기능
+void Add(int x, int y)
+{
+	cout << x + y << endl;
+}
+
+void Add(float x, float y)
+{
+	cout << x + y << endl;
+}
+
+// 함수의 오버로딩의 경우 함수의 매개변수에 전달하는 인수의 형태를 보고 호출하므로, 반환형으로 함수의 오버로딩을 생성할 수 없다.
+//int Add(int x, int y)
+//{
+//	return x + y;
+//}
+#pragma endregion
+
+
 
 
 int main()
 {
-
-#pragma region 다중 상속
-	//하나의 하위 클래스가 여러 개의 상위 클래스를 상속받는 것
-	//C#은 지원하지 않을 뿐더러 좋은 것도 아니다
-
-	// Computer computer;
-
-	// 다중 상속은 여러 개의 상위 클래스에 중복되는 속성이 존재할 수 있기 때문에 범위 지정 연산자를 통해서 상위 클래스의 이름을 선언하고 속성을 사용해야 한다
-
-	// computer.Keyboard::price = 10000;
-	// computer.Input('c');
-	// computer.OnDrag();
+#pragma region 함수의 오버로딩
+	//Add(10, 20);
+	//Add(10.5f, 9.85f);
 #pragma endregion
+
+#pragma region 연산자 오버로딩
+	//Vector3 v1(2,2,2);
+	//v1.Print();
+	//
+	//Vector3 v2(3,3,3);
+	//v2.Print();
+	//
+	//Vector3 v3 = v1 + v2;
+	//v3.Print();
+
+	Vector3 v4(1, 1, 1);
+	++(++v4);
+	v4.Print();
+#pragma endregion
+
+
+
 
 
 	return 0;

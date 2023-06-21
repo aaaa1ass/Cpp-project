@@ -1,7 +1,7 @@
-#include "Weapon.h"
-
-void Weapon::Stat()
-{
-	std::cout << "공격력: " << attack << std::endl;
-}
-
+//#include "Weapon.h"
+//
+//void Weapon::Stat()
+//{
+//	std::cout << "공격력: " << attack << std::endl;
+//}
+//

@@ -36,6 +36,9 @@
     <ClCompile Include="Class Cpp\Device.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Class Cpp\Vector3.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Class Header\Header.h">
@@ -78,6 +81,12 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Class Header\Device.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="(2023.6.20)다중상속.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Class Header\Vector3.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
