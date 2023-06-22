@@ -4,11 +4,12 @@
 
 class Weapon
 {
-private:
+protected:
 	int attack;
 
 public:
-	void Stat();
+	virtual void Stat();
+	void Attack();
 
 };
 
