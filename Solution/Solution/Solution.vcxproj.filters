@@ -42,6 +42,12 @@
     <ClCompile Include="Class Cpp\Sword.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Class Cpp\Unit.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Class Cpp\Marine.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Class Header\Header.h">
@@ -96,6 +102,15 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Class Header\Sword.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="(2023.6.22)가상함수.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Class Header\Unit.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Class Header\Marine.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

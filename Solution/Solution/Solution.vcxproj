@@ -132,10 +132,12 @@
     <ClCompile Include="Class Cpp\IPhone.cpp" />
     <ClCompile Include="Class Cpp\Keyboard.cpp" />
     <ClCompile Include="Class Cpp\Mouse.cpp" />
+    <ClCompile Include="Class Cpp\Marine.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Class Cpp\Weapon.cpp" />
     <ClCompile Include="Class Cpp\Vector3.cpp" />
     <ClCompile Include="Class Cpp\Sword.cpp" />
+    <ClCompile Include="Class Cpp\Unit.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="(2023.6.13)이름공간.h" />
@@ -145,6 +147,7 @@
     <ClInclude Include="(2023.6.19)상속.h" />
     <ClInclude Include="(2023.6.20)다중상속.h" />
     <ClInclude Include="(2023.6.21)함수의오버로딩.h" />
+    <ClInclude Include="(2023.6.22)가상함수.h" />
     <ClInclude Include="Class Header\Computer.h" />
     <ClInclude Include="Class Header\DataFile.h" />
     <ClInclude Include="Class Header\Device.h" />
@@ -156,6 +159,8 @@
     <ClInclude Include="Class Header\Weapon.h" />
     <ClInclude Include="Class Header\Vector3.h" />
     <ClInclude Include="Class Header\Sword.h" />
+    <ClInclude Include="Class Header\Marine.h" />
+    <ClInclude Include="Class Header\Unit.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
