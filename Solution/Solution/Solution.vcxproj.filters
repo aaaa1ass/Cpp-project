@@ -51,6 +51,9 @@
     <ClCompile Include="Class Cpp\Ghost.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="Class Cpp\Item.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Class Header\Header.h">
@@ -120,6 +123,12 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Class Header\Ghost.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="(2023.6.26)업캐스팅.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Class Header\Item.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>
