@@ -1,76 +1,98 @@
 #include <iostream>
 #include <memory>
+#include <string>
 #include "Class Header/Item.h"
 
 using namespace std;
 
-#pragma region 스마트 포인터
-//포인터처럼 동작하는 클래스 템플릿
-//사용이 끝난 메모리를 자동으로 해제하는 포인터
+#pragma region 템플릿
+	//함수나 클래스를 다시 작성하지 않아도 수많은 자료형에서 동작할 수 있도록 해주는 기능
+template<typename T>
+void DateType(T value)
+{
+	cout << value << endl;
+}
 #pragma endregion
+
+#pragma region 템플릿의 특수화
+// 템플릿 함수를 사용하지만, 특정 매개변수에 대해서는 별도 처리를 하는 기능
+template<typename T>
+int DataSize(T data)
+{
+	return sizeof(data);
+}
+
+template<>
+int DataSize(const char* content)
+{
+	return strlen(content) + 1;
+}
+#pragma endregion
+
+#pragma region 클래스 템플릿
+template<typename T1, typename T2>
+class Dictionary
+{
+private:
+	T1 key;
+	T2 value;
+
+public:
+	Dictionary(T1 key, T2 value) 
+	{
+		this->key = key;
+		this->value = value;
+	};
+
+	void ContainsKey()
+	{
+		cout << key << endl;
+	}
+	void ContainsValue()
+	{
+		cout << value << endl;
+	}
+
+};
+#pragma endregion
+
+
 
 
 int main()
 {
-#pragma region unique_ptr 포인터
-	// // 하나의 메모리 공간만 가리킬 수 있는 포인터
-	// 
-	// //초기화
-	// // 1)
-	// std::unique_ptr<int> uniquePtr(new int(5));
-	// 
-	// // uniquePtr이 가지고 있던 메모리 소유권(동적으로 할당한 메모리)을 uniquePt1에게 메모리 소유권을 넘겨주는 과정
-	// std::unique_ptr<int> uniquePtr1 = std::move(uniquePtr);
-	// 
-	// //std::move() 함수로 객체에 대한 소유권을 이전할 수 있지만, 객체를 이전한 유니크 포인터는 아무것도 가리킬 수 없으며, 소멸한 포인터로 처리된다
-	// std::cout << *uniquePtr1 << std::endl;
-	// 
-	// *uniquePtr1 = 300;
-	// 
-	// std::cout << *uniquePtr1 << std::endl;
-	// 
-	// // 2)
-	// //std::unique_ptr<int> uniquePtr = std::make_unique<int>(new int(5));
+#pragma region 템플릿
+	//DateType('A');
+	//DateType(10);
+	//DateType(3.141592f);
+	//DateType(4.75);
 #pragma endregion
-
-#pragma region shared_ptr 포인터
-	// 어떤 하나의 객체를 참조하는 스마트 포인터의 갯수를 참조하는 포인터
-	//참조하고 있는 스마트 포인터의 수를 참조 카운트라고 한다
-
-	//참조 카운트(Reference Counting)
-	//해당 메모리를 참조하는 포인터가 몇개가  있는 지 나타내는 값
 	
-	//초기화
-	//1)
-	//std::shared_ptr<int> shared_ptr(new int(999));
-
-	//2)
-	// std::shared_ptr<Item> shared_ptr1 = std::make_shared<Item>();
+#pragma region 템플릿 특수화
+	// int integer = 10;
+	// double decimal = 6.75;
+	// const char* content = "I am sad";
 	// 
-	// 
-	// {
-	// 	shared_ptr<Item> shared_ptr2 = shared_ptr1;
-	// 	std::cout << shared_ptr1.use_count() << std::endl;
-	// }
-	// std::cout << shared_ptr1.use_count() << std::endl;
+	// std::cout << "integer 변수의 크기 : " << DataSize(integer) << endl;
+	// std::cout << "decimal 변수의 크기 : " << DataSize(decimal) << endl;
+	// std::cout << "content 변수의 크기 : " << DataSize(content) << endl;
 #pragma endregion
 
-#pragma region weak_ptr 포인터
-	//하나 이상의 shared_ptr 인스턴스가 소유하는 객체에 대한 접근을 제공하지만, 참조 카운트에 포함되지 않는 스마트 포인터
-	shared_ptr<Item> ptr1(new Item);
-	shared_ptr<Item> ptr2(new Item);
-
-	std::cout << "ptr1의 " << ptr1.use_count() << std::endl;
-	std::cout << "ptr2의 " << ptr2.use_count() << std::endl;
-
-	ptr1->ptr = ptr2;
-	ptr2->ptr = ptr1;
-
-	std::cout << "ptr1의 " << ptr1.use_count() << std::endl;
-	std::cout << "ptr2의 " << ptr2.use_count() << std::endl;
+#pragma region 클래스 템플릿
+	//Dictionary<char, int> dictionary1 ('A',100);
+	//dictionary1.ContainsKey();
+	//dictionary1.ContainsValue();
+	//
+	//Dictionary<const char *, double> dictionary2 ("Mario", 1.6);
+	//dictionary2.ContainsKey();
+	//dictionary2.ContainsValue();
 #pragma endregion
 
+	//Item item;
+	//
+	//item.Search(100);
 
+	Item::Upgrade();
 
 	return 0;
 }

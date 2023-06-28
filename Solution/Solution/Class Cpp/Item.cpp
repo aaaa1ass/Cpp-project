@@ -9,3 +9,7 @@ Item::~Item()
 {
 	std::cout << "Item ¼Ò¸ê" << std::endl;
 }
+
+
+
+

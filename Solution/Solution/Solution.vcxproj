@@ -152,6 +152,7 @@
     <ClInclude Include="(2023.6.22)가상함수.h" />
     <ClInclude Include="(2023.6.23)순수가상함수.h" />
     <ClInclude Include="(2023.6.26)업캐스팅.h" />
+    <ClInclude Include="(2023.6.27)스마트포인터.h" />
     <ClInclude Include="Class Header\Computer.h" />
     <ClInclude Include="Class Header\DataFile.h" />
     <ClInclude Include="Class Header\Device.h" />
