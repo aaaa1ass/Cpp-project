@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source.cpp">
+    <ClCompile Include="Class Cpp\Source.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Class Cpp\Weapon.cpp">
@@ -52,6 +52,18 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Class Cpp\Item.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Class Cpp\Animal.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Class Cpp\Carnivore.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Class Cpp\Tiger.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Class Cpp\Lion.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
@@ -132,6 +144,21 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="(2023.6.27)스마트포인터.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="(2023.6.28)템플릿.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Class Header\Animal.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Class Header\Carnivore.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Class Header\Tiger.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Class Header\Lion.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

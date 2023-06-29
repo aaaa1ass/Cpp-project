@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <memory>
+static int itemCode;
 
 class Item
 {
@@ -28,7 +29,7 @@ public:
 	~Item();
 };
 
-static int itemCode;
+
 
 template<typename T>
 inline void Item::Search(T data)
