@@ -1,9 +1,9 @@
 #include "../Class Header/Sword.h"
 
-Sword::Sword()
-{
-	std::cout << "Sword() 생성" << std::endl;
-}
+//Sword::Sword()
+//{
+//	std::cout << "Sword() 생성" << std::endl;
+//}
 
 Sword::~Sword()
 {
@@ -12,8 +12,8 @@ Sword::~Sword()
 
 void Sword::Stat()
 {
-	attack = 999;
-	std::cout << "검 공격력: " << attack << std::endl;
+	std::cout << "검 공격력: " << m_attack << std::endl;
+	std::cout << "치명타 확률: " << m_criticalHit << std::endl;
 
 }
 
