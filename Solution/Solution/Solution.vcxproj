@@ -160,6 +160,7 @@
     <ClInclude Include="(2023.6.28)템플릿.h" />
     <ClInclude Include="(2023.6.29)예외처리.h" />
     <ClInclude Include="(2023.6.30)다운캐스팅.h" />
+    <ClInclude Include="(2023.7.3)선형컨테이너.h" />
     <ClInclude Include="Class Header\Carnivore.h" />
     <ClInclude Include="Class Header\Animal.h" />
     <ClInclude Include="Class Header\Computer.h" />
