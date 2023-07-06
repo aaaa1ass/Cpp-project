@@ -1,73 +1,81 @@
 ﻿#include <iostream>
 
-#include <queue>
-#include <stack>
-#include <vector>
-
+#include <list>
+#include <map>
+#include <set>
 
 using namespace std;
 
 int main()
 {
-#pragma region 컨테이너 어댑터
-	//기존 컨테이너의 인터페이스를 제한하여 만든, 기능 제한되거나 변형된 컨테이너
-	// std::queue<int> queue;
+#pragma region 연관 컨테이너
+	//key와 value처럼 관련있는 데이터를 하나의 쌍으로 저장하는 컨테이너
+
+	//std::list
+	//std::list<int> list;
+	//
+	//list.push_front(100);
+	//list.push_back(90);
+	//list.push_back(32);
+	//list.push_back(12);
+	//list.push_back(2);
+	//
+	//std::list<int>::iterator iter;
+	//
+	//for (iter = list.begin(); iter != list.end(); iter++)
+	//{
+	//	cout << *iter << endl;
+	//}
+	//
+	//list.pop_front();
+	//list.pop_back();
+	//
+	//iter = list.begin();
+	//iter++;
+	//list.insert(iter, 99);
+	//list.erase(iter);
+	//
+	//cout << endl;
+	//
+	//for (iter = list.begin(); iter != list.end(); iter++)
+	//{
+	//	cout << *iter << endl;
+	//}
+
+	//std::map
+	// std::map<const char*, int> map;
 	// 
-	// queue.push(10);
-	// queue.push(20);
-	// queue.push(30);
-	// queue.push(40);
-	// queue.push(50);
+	// map.insert(pair<const char*, int>("Sword", 1000));
+	// map.insert(pair<const char*, int>("Shoes", 500));
 	// 
+	// std::map<const char*, int>::iterator mapIterator;
 	// 
-	// while (queue.empty() == 0)
+	// for (mapIterator = map.begin(); mapIterator != map.end(); mapIterator++)
 	// {
-	// 	cout << queue.front() << " ";
-	// 	queue.pop();
+	// 	// mapIterator->first (key)
+	// 	// mapIterator->second (VALUE)
+	// 	std::cout << "KEY: " << mapIterator->first << " VALUE: " << mapIterator->second << std::endl;
 	// }
+	// 
+	// //map.find() KEY를 검색하는 함수
+	// if (map.find("Swordf") != map.end())
+	// 	cout << "KEY가 존재합니다. " << std::endl;
+	// else
+	// 	cout << "KEY가 존재하지 않습니다. " << endl;
 
-	//queue.pop(); 컨테이너에 데이터가 없을 때 pop()을 시도하면 런타임 에러 발생
-	
-
-	//std::swap
-	// int a = 10;
-	// int b = 20;
-	// 
-	// std::swap(a, b);
-	// 
-	// cout << "a: " << a << endl;
-	// cout << "b: " << b << endl;
-
-	//std::stack
-	// std::stack<int> stack;
-	// stack.push(10);
-	// stack.push(20);
-	// stack.push(30);
-	// stack.push(40);
-	// stack.push(50);
-	// 
-	// while (stack.size() != 0)
-	// {
-	// 	cout << stack.top() << endl;
-	// 	stack.pop();
-	// }
-
-	// std::iterator 반복자
-	// std::vector<int> vector;
-	// 
-	// vector.push_back(10);
-	// vector.push_back(20);
-	// vector.push_back(30);
-	// 
-	// std::vector<int>::iterator iter;
-	// vector.insert(vector.begin() + 1, 999);
-	// vector.erase(vector.begin() + 3);
-	// 
-	// // iter가 가리키는 값
-	// for (iter = vector.begin(); iter != vector.end(); iter++)
-	// {
-	// 	cout << *iter << endl;
-	// }
+	//std::set
+	//std::set<int> set;
+	//
+	//set.insert(10);
+	//set.insert(2);
+	//set.insert(-23);
+	//
+	//set.clear(); // 모든 원소 삭제
+	//
+	//for (auto& element : set)
+	//{
+	//	cout << element << endl;
+	//}
 
 #pragma endregion
 
